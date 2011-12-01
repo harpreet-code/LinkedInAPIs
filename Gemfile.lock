@@ -62,6 +62,7 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.4)
     oauth (0.4.5)
+    pg (0.11.0)
     polyglot (0.3.3)
     rack (1.3.5)
     rack-cache (1.0.3)
@@ -101,6 +102,7 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.4)
+    therubyracer-heroku (0.8.1.pre3)
     thor (0.14.6)
     tilt (1.3.3)
     treetop (1.4.10)
@@ -122,8 +124,10 @@ DEPENDENCIES
   json
   linkedin (~> 0.3.6)
   oauth
+  pg
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)
   sqlite3
+  therubyracer-heroku
   turn
   uglifier
