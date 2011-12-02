@@ -122,7 +122,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.0)
   jquery-rails
   json
-  linkedin (~> 0.3.6)
+  linkedin
   oauth
   pg
   rails (= 3.1.0)

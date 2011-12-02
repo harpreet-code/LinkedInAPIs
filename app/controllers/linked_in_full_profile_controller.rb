@@ -16,11 +16,17 @@ def index
   
   access_token = OAuth::AccessToken.new(consumer, oaut_token, oauth_secret)
   # Pick some fields
-  fields = ['first-name', 'last-name', 'headline', 'industry', 'num-connections'].join(',')
+  profile_base_fields = ['first-name', 'last-name', 'headline', 'industry', 'num-connections'].join(',')
 
-  # Make a request for JSON data
-  json_txt = access_token.get("/v1/people/~:(#{fields})", 'x-li-format' => 'json').body
-  @profile = JSON.parse(json_txt)
+  # Make a request for JSON profile data
+  profile_base_json_txt = access_token.get("/v1/people/~:(#{profile_base_fields})", 'x-li-format' => 'json').body
+  @profile = JSON.parse(profile_base_json_txt)
+  
+  connection_base_fields = ['id','auth-token','first-name','last-name','headline','email-address','current-status'].join(',')
+  
+  connections_json_txt = access_token.get("/v1/people/~:(connections:(#{connection_base_fields}))", 'x-li-format' => 'json').body
+  @connections = JSON.parse(connections_json_txt)
+  
 end
 
 end

@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
-gem "linkedin", "~> 0.3.6"
+gem 'linkedin'
 gem 'oauth'
 gem 'json'
 # gem 'yaml' do we need this? version?
